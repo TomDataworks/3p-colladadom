@@ -8,7 +8,16 @@ src += src/modules/stdErrPlugin/stdErrPlugin.cpp \
 
 src += $(wildcard src/$(colladaVersion)/dom/*.cpp)
 
-includeOpts := -Iinclude -Iinclude/$(colladaVersion)
+includeOpts := -Istage/packages/include \
+	-Istage/packages/include/zlib \
+	-Istage/packages/include/pcre \
+	-Istage/packages/include/libxml2 \
+	-Istage/packages/include/minizip \
+	-Iinclude \
+	-Iinclude/$(colladaVersion)
+
+# Favor autobuild dependencies
+libOpts += -Lstage/packages/lib/$(conf)/
 
 ifneq ($(findstring $(os),linux mac),)
 ccFlags += -fPIC
@@ -21,15 +30,12 @@ endif
 ifneq ($(findstring libxml,$(xmlparsers)),)
 ccFlags += -DDOM_INCLUDE_LIBXML
 ifeq ($(os),windows)
-includeOpts += -Iexternal-libs/libxml2/include
-libOpts += -Lexternal-libs/libxml2/$(buildID)/lib -lxml2 -lws2_32 -lz
+libOpts += -lxml2 -lws2_32 -lz
 else
 ifeq ($(os),linux)
-includeOpts += -Iexternal-libs/libxml2/include
-libOpts += -Lexternal-libs/libxml2/$(buildID)/lib -lxml2
-else
-includeOpts += -I/usr/include/libxml2
 libOpts += -lxml2
+else
+libOpts += -lxml2 -liconv
 endif
 endif
 endif
@@ -61,11 +67,9 @@ libOpts += stage/packages/lib/$(conf)/libboost_filesystem-mt$(debug_suffix).a
 endif
 
 # minizip
-includeOpts += -Iexternal-libs/minizip/include
-libOpts += -Lbuild/$(buildID)-$(colladaVersion)$(debugSuffix)/
-libOpts += -lminizip$(debugSuffix)
+libOpts += -lminizip
 # as we link minizip static on osx, we need to link against zlib, too.
-ifeq ($(os),mac)
+ifneq ($(findstring $(os),linux mac),)
 libOpts += -lz
 endif
 
@@ -89,7 +93,8 @@ targets += $(addprefix $(outPath),$(windowsLibName)$(libVersionNoDots)$(debugSuf
 
 else 
 ifeq ($(os),mac)
-# On Mac we build a framework
+# On Mac we build an archive and a framework
+targets += $(addprefix $(outPath),libcollada$(colladaVersionNoDots)dom$(debugSuffix).a)
 targets += $(addprefix $(outPath),libcollada$(colladaVersionNoDots)dom$(debugSuffix).framework)
 frameworkHeadersPath = $(framework)/Versions/$(libVersion)/Headers
 copyFrameworkHeadersCommand = cp -R include/* $(frameworkHeadersPath) && \

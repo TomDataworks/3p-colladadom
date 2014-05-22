@@ -31,6 +31,13 @@ endif
 libOpts += -framework $(notdir $(basename $(domName)))
 endif
 
+includeOpts += -Istage/packages/include \
+	-Istage/packages/include/zlib \
+	-Istage/packages/include/pcre \
+	-Istage/packages/include/libxml2 \
+	-Istage/packages/include/minizip
+libOpts += -Lstage/packages/lib/$(conf)/
+
 ifeq ($(installTest),)
 includeOpts += -Iinclude -Iinclude/$(colladaVersion)
 else ifeq ($(os),linux)
@@ -55,8 +62,12 @@ endif
 endif
 
 # Boost defs
+# Test programs use some deprecated interfaces...
+ccFlags += -DBOOST_FILESYSTEM_DEPRECATED
 ifeq ($(os),linux)
-libOpts += -lboost_filesystem
+libOpts += -lboost_filesystem-mt$(debugSuffix)
+else ifeq ($(os),mac)
+libOpts += -lboost_filesystem-mt$(debugSuffix)
 else
 includeOpts += -Iexternal-libs/boost
 libOpts += external-libs/boost/lib/$(buildID)/libboost_system.a

@@ -16,93 +16,131 @@ fi
 #execute build from top-level checkout
 cd "$(dirname "$0")"
 
-# load autbuild provided shell functions and variables
+# load autobuild provided shell functions and variables
 set +x
 eval "$("$AUTOBUILD" source_environment)"
 set -x
+
 top="$(pwd)"
+stage="$top/stage"
+
+[ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't installed zlib package yet."
 
 case "$AUTOBUILD_PLATFORM" in
-    "windows")
-        build_sln "projects/vc10-1.4/dom.sln" "Debug|Win32"
-        build_sln "projects/vc10-1.4/dom.sln" "Release|Win32"
+
+    windows)
+        build_sln "projects/vc10-1.4/dom.sln" "Debug|Win32" domTest
+        build_sln "projects/vc10-1.4/dom.sln" "Release|Win32" domTest
         
-		mkdir -p stage/lib/{debug,release}
-		cp "build/vc10-1.4-d/libcollada14dom22-d.lib" \
-				"stage/lib/debug/libcollada14dom22-d.lib"
-		cp "build/vc10-1.4-d/libcollada14dom22-d.dll" \
-				"stage/lib/debug/libcollada14dom22-d.dll"
-				
-		cp "build/vc10-1.4/libcollada14dom22.lib" \
-				"stage/lib/release/libcollada14dom22.lib"
-		cp "build/vc10-1.4/libcollada14dom22.dll" \
-				"stage/lib/release/libcollada14dom22.dll"			
-        
+        # conditionally run unit tests
+        if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
+            build/vc10-1.4-d/domTest.exe -all
+            build/vc10-1.4/domTest.exe -all
+        fi
+
+        # stage the good bits
+        mkdir -p "$stage"/lib/{debug,release}
+        cp -a build/vc10-1.4-d/libcollada14dom23-sd.lib \
+            "$stage"/lib/debug/
+                
+        cp -a build/vc10-1.4/libcollada14dom23-s.lib \
+            "$stage"/lib/release/
     ;;
-        "darwin")
-			libdir="$top/stage"
-            mkdir -p "$libdir"/lib/{debug,release}
-			make
 
-			install_name_tool -id "@executable_path/../Resources/libcollada14dom-d.dylib" "build/mac-1.4-d/libcollada14dom-d.dylib" 
-			install_name_tool -id "@executable_path/../Resources/libcollada14dom.dylib" "build/mac-1.4/libcollada14dom.dylib" 
+    darwin)
+        # Select SDK with full path.  This shouldn't have much effect on this
+        # build but adding to establish a consistent pattern.
+        #
+        # sdk=/Developer/SDKs/MacOSX10.6.sdk/
+        # sdk=/Developer/SDKs/MacOSX10.7.sdk/
+        # sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.6.sdk/
+        sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/
+            
+        opts="${TARGET_OPTS:--arch i386 -iwithsysroot $sdk -mmacosx-version-min=10.6 -DMAC_OS_X_VERSION_MIN_REQUIRED=1060}"
 
-			cp "build/mac-1.4-d/libcollada14dom-d.dylib" \
-				"$libdir/lib/debug/libcollada14dom-d.dylib"
-			cp "build/mac-1.4-d/libminizip-d.a" \
-				"$libdir/lib/debug/libminizip-d.a"
+        libdir="$top/stage"
+        mkdir -p "$libdir"/lib/{debug,release}
 
-			cp "build/mac-1.4/libcollada14dom.dylib" \
-				"$libdir/lib/release/libcollada14dom.dylib"
-			cp "build/mac-1.4/libminizip.a" \
-				"$libdir/lib/release/libminizip.a"
-		;;
-        "linux")
-	    export LDFLAGS=-m32
-	    export CFLAGS=-m32
-	    export CXXFLAGS=-m32
-	    export CXX=g++-4.1
-	    export CC=gcc-4.1
-			libdir="$top/stage"
-            mkdir -p "$libdir"/lib/{debug,release}
-			make 
+        make clean
 
-			cp "build/linux-1.4/libcollada14dom.so" \
-				"$libdir/lib/release/libcollada14dom.so"
-			cp "build/linux-1.4/libcollada14dom.so.2" \
-				"$libdir/lib/release/libcollada14dom.so.2"
-			cp "build/linux-1.4/libcollada14dom.so.2.2" \
-				"$libdir/lib/release/libcollada14dom.so.2.2"
-			cp "build/linux-1.4/libcollada14dom.a" \
-				"$libdir/lib/release/libcollada14dom.a"
-			cp "build/linux-1.4/libminizip.so" \
-				"$libdir/lib/release/libminizip.so"
-			cp "build/linux-1.4/libminizip.a" \
-				"$libdir/lib/release/libminizip.a"
+        CFLAGS="$opts -gdwarf-2" \
+            CXXFLAGS="$opts -gdwarf-2" \
+            LDFLAGS="-Wl,-headerpad_max_install_names" \
+            arch=i386 \
+            make
 
+        # conditionally run unit tests
+        if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
+            build/mac-1.4-d/domTest -all
+            build/mac-1.4/domTest -all
+        fi
 
-			cp "build/linux-1.4-d/libcollada14dom-d.so" \
-				"$libdir/lib/debug/libcollada14dom-d.so"
-			cp "build/linux-1.4-d/libcollada14dom-d.so.2" \
-				"$libdir/lib/debug/libcollada14dom-d.so.2"
-			cp "build/linux-1.4-d/libcollada14dom-d.so.2.2" \
-				"$libdir/lib/debug/libcollada14dom-d.so.2.2"
-			cp "build/linux-1.4-d/libcollada14dom-d.a" \
-				"$libdir/lib/debug/libcollada14dom-d.a"
-			cp "build/linux-1.4-d/libminizip-d.so" \
-				"$libdir/lib/debug/libminizip-d.so"
-			cp "build/linux-1.4-d/libminizip-d.a" \
-				"$libdir/lib/debug/libminizip-d.a"
-        ;;
+        # install_name_tool -id "@executable_path/../Resources/libcollada14dom-d.dylib" "build/mac-1.4-d/libcollada14dom-d.dylib" 
+        # install_name_tool -id "@executable_path/../Resources/libcollada14dom.dylib" "build/mac-1.4/libcollada14dom.dylib" 
+ 
+        cp -a build/mac-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
+        cp -a build/mac-1.4/libcollada14dom.a "$libdir"/lib/release/
+    ;;
 
+    linux)
+        # Linux build environment at Linden comes pre-polluted with stuff that can
+        # seriously damage 3rd-party builds.  Environmental garbage you can expect
+        # includes:
+        #
+        #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
+        #    DISTCC_LOCATION            top            branch      CC
+        #    DISTCC_HOSTS               build_name     suffix      CXX
+        #    LSDISTCC_ARGS              repo           prefix      CFLAGS
+        #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
+        #
+        # So, clear out bits that shouldn't affect our configure-directed build
+        # but which do nonetheless.
+        #
+        # unset DISTCC_HOSTS CC CXX CFLAGS CPPFLAGS CXXFLAGS
+
+        # Prefer gcc-4.6 if available.
+        if [ -x /usr/bin/gcc-4.6 -a -x /usr/bin/g++-4.6 ]; then
+            export CC=/usr/bin/gcc-4.6
+            export CXX=/usr/bin/g++-4.6
+        fi
+
+        # Default target to 32-bit
+        opts="${TARGET_OPTS:--m32}"
+
+        libdir="$top/stage"
+        mkdir -p "$libdir"/lib/{debug,release}
+
+        make clean
+
+        LDFLAGS="$opts" \
+            CFLAGS="$opts" \
+            CXXFLAGS="$opts" \
+            arch=i386 \
+            make 
+
+        # conditionally run unit tests
+        if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
+            build/linux-1.4-d/domTest -all
+            build/linux-1.4/domTest -all
+        fi
+
+        cp -a build/linux-1.4/libcollada14dom.a "$libdir"/lib/release/
+        cp -a build/linux-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
+    ;;
 esac
-mkdir -p "stage/include/collada"
-cp -R include/* "stage/include/collada"
+
+mkdir -p stage/include/collada
+cp -a include/* stage/include/collada
+
 mkdir -p stage/LICENSES
-cp "license.txt" "stage/LICENSES/collada.txt"
+cp -a license.txt stage/LICENSES/collada.txt
+
 mkdir -p stage/LICENSES/collada-other
-cp "license/minizip-license.txt" "stage/LICENSES/minizip.txt"
-cp "license/tinyxml-license.txt" "stage/LICENSES/tinyxml.txt"
+cp -a license/minizip-license.txt stage/LICENSES/minizip.txt
+cp -a license/tinyxml-license.txt stage/LICENSES/tinyxml.txt
+
+mkdir -p stage/docs/colladadom/
+cp -a README.Linden stage/docs/colladadom/
 
 pass
 

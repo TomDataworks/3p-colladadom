@@ -38,15 +38,15 @@ endif
 os := linux
 ifneq ($(shell uname | grep -i darwin),)
 os := mac
-# make sure mac builds on gcc 4.0 and uses the 10.5 sdk but sets min version to 10.4
-CXX:=g++-4.0
-CXXFLAGS:= -fno-stack-protector -mmacosx-version-min=10.4 -DMAC_OS_X_VERSION_MIN_REQUIRED=1040 -isysroot /Developer/SDKs/MacOSX10.5.sdk
-LDFLAGS:= -fno-stack-protector -mmacosx-version-min=10.4 -DMAC_OS_X_VERSION_MIN_REQUIRED=1040 -isysroot /Developer/SDKs/MacOSX10.5.sdk
+# make sure mac builds on llvm-gcc (4.2) and uses the 10.7 sdk with min version of 10.6
+CXX ?= llvm-g++
+CXXFLAGS += -fno-stack-protector
+LDFLAGS += -fno-stack-protector
 else ifneq ($(or $(shell uname | grep -i cygwin),$(shell uname | grep -i mingw)),)
 os := windows
 else
-#linux system, ensure we're using gcc-4.1
-CXX:=g++-4.1
+#linux system, ensure we're using gcc-4.1 if nothing else specified
+CXX ?= g++-4.1
 endif
 
 # nativeArch: For internal use. Don't override this, instead override 'arch'.
@@ -56,10 +56,11 @@ nativeArch := ppc
 endif
 
 # arch: x86 (or i386), x64 (or x86_64), ppc, ppc64
-arch := i386
+arch ?= i386
 
 # project: 'dom', 'domTest', or 'all'
-project := minizip dom
+# project := minizip dom
+project ?= dom domTest
 
 # Release/debug configuration: 'release', 'debug', or 'all'
 conf := all
@@ -74,7 +75,7 @@ parser := libxml
 file :=
 
 # Include any custom build settings
--include ~/.collada-dom/customSettings.mk
+#-include ~/.collada-dom/customSettings.mk    # Disabled as being appalling beyond bearing
 -include make/customSettings.mk
 
 -include make/installPrefix.mk
@@ -109,7 +110,7 @@ $(eval $(call setBuildVar,parser,libxml tinyxml))
 
 comma := ,
 domMajorVersion := 2
-domMinorVersion := 2
+domMinorVersion := 3
 domVersion := $(domMajorVersion).$(domMinorVersion)
 domVersionNoDots := $(subst .,,$(domVersion))
 
