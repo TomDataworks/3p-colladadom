@@ -49,8 +49,13 @@ case "$AUTOBUILD_PLATFORM" in
 
     darwin)
         # Darwin build environment at Linden is also pre-polluted like Linux
-        # and that affects colladadom builds.
-        set
+        # and that affects colladadom builds.  Here are some of the env vars
+        # to look out for:
+        #
+        # AUTOBUILD             GROUPS              LD_LIBRARY_PATH         SIGN
+        # arch                  branch              build_*                 changeset
+        # helper                here                prefix                  release
+        # repo                  root                run_tests               suffix
 
         # Select SDK with full path.  This shouldn't have much effect on this
         # build but adding to establish a consistent pattern.
