@@ -8,7 +8,7 @@ ar := ar rcs
 exeSuffix :=
 endif
 
-ccFlags := -Wall
+ccFlags := $(CXXFLAGS) -Wall
 ifeq ($(conf),debug)
 ccFlags += -g -D_DEBUG
 debugSuffix := -d
@@ -22,7 +22,7 @@ ifeq ($(os),mac)
 ccFlags += $(addprefix -arch ,$(subst x86,i386,$(archs)))
 endif
 
-libOpts :=
+libOpts := $(LDFLAGS)
 ifeq ($(os),windows)
 # In case we're using the Cygwin compiler/linker, instruct cygwin to use the
 # MinGW compiler to get a native Windows build. If you actually want a

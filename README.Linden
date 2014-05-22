@@ -82,7 +82,11 @@
 
     * Build modifications to Makefile, make/dom.mk, make/domTest.mk
       and the VC10 project files to compile and link against the
-      package dependencies.
+      package dependencies.  For whatever reason, make/* is using
+      ccFlags/libOpts/includeOpts to control compilation while
+      Makefile is using CC/CXX/CFLAGS/CXXFLAGS, etc.  There was no
+      communication between the two so common.mk was modified to
+      incorporate Makefile settings into make/*.mk processes.
 
     * Autobuild packaging of only the static archives.  Shared
       libraries are still built and they still have their undesireable
