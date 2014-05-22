@@ -48,6 +48,10 @@ case "$AUTOBUILD_PLATFORM" in
     ;;
 
     darwin)
+        # Darwin build environment at Linden is also pre-polluted like Linux
+        # and that affects colladadom builds.
+        set
+
         # Select SDK with full path.  This shouldn't have much effect on this
         # build but adding to establish a consistent pattern.
         #
@@ -61,7 +65,7 @@ case "$AUTOBUILD_PLATFORM" in
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
 
-        make clean
+        make clean arch=i386                            # Hide 'arch' env var
 
         CFLAGS="$opts -gdwarf-2" \
             CXXFLAGS="$opts -gdwarf-2" \
@@ -107,10 +111,19 @@ case "$AUTOBUILD_PLATFORM" in
         # Default target to 32-bit
         opts="${TARGET_OPTS:--m32}"
 
+        # Handle any deliberate platform targeting
+        if [ -z "$TARGET_CPPFLAGS" ]; then
+            # Remove sysroot contamination from build environment
+            unset CPPFLAGS
+        else
+            # Incorporate special pre-processing flags
+            export CPPFLAGS="$TARGET_CPPFLAGS" 
+        fi
+
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
 
-        make clean
+        make clean arch=i386            # Hide 'arch' env var
 
         LDFLAGS="$opts" \
             CFLAGS="$opts" \
