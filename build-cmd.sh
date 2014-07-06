@@ -29,21 +29,21 @@ stage="$top/stage"
 case "$AUTOBUILD_PLATFORM" in
 
     windows)
-        build_sln "projects/vc10-1.4/dom.sln" "Debug|Win32" domTest
-        build_sln "projects/vc10-1.4/dom.sln" "Release|Win32" domTest
+        build_sln "projects/vc12-1.4/dom.sln" "Debug|Win32" domTest
+        build_sln "projects/vc12-1.4/dom.sln" "Release|Win32" domTest
         
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/vc10-1.4-d/domTest.exe -all
-            build/vc10-1.4/domTest.exe -all
+            build/vc12-1.4-d/domTest.exe -all
+            build/vc12-1.4/domTest.exe -all
         fi
 
         # stage the good bits
         mkdir -p "$stage"/lib/{debug,release}
-        cp -a build/vc10-1.4-d/libcollada14dom23-sd.lib \
+        cp -a build/vc12-1.4-d/libcollada14dom23-sd.lib \
             "$stage"/lib/debug/
                 
-        cp -a build/vc10-1.4/libcollada14dom23-s.lib \
+        cp -a build/vc12-1.4/libcollada14dom23-s.lib \
             "$stage"/lib/release/
     ;;
 

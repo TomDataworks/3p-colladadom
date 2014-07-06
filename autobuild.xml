@@ -42,9 +42,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8af0500013739866a41cfc2ce90e4f4b</string>
+              <string>047bfb76773aaa89a175c1bcd1b7e1e7</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/CYGWIN/installer/boost-1.55.0-windows-20140602.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.55.0-windows-vs12-20140706.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -90,9 +90,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ba20e2634b4c249a7064620d135f7972</string>
+              <string>9f6cf700b497fd1af69ef3d6f931be53</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/CYGWIN/installer/libxml2-2.9.1-windows-20140602.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.1-windows-vs12-20140706.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -138,9 +138,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9250f74fed826ad1b8700229e964519d</string>
+              <string>618517af75bc872601f4e371a244bef4</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-pcre-update/rev/290406/arch/CYGWIN/installer/pcre-8.35-windows-20140529.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows-vs12-20140706.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -186,9 +186,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ab45a628e22a495814e806ce46081806</string>
+              <string>9b4f4d1324aabd722e6a01e748d151cd</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/CYGWIN/installer/zlib-1.2.8-windows-20140602.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/zlib-1.2.8-windows-vs12-20140705.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
