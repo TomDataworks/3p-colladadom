@@ -49,6 +49,18 @@
             <key>name</key>
             <string>windows</string>
           </map>
+          <key>windows64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>138650dbbbb3d7e8664a19d510260615</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.55.0-windows64-vs12-20140709.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>windows64</string>
+          </map>
         </map>
       </map>
       <key>libxml2</key>
@@ -96,6 +108,18 @@
             </map>
             <key>name</key>
             <string>windows</string>
+          </map>
+          <key>windows64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>425ed9b60b909fc33605bbac76a25f5d</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.1-windows64-vs12-20140709.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>windows64</string>
           </map>
         </map>
       </map>
@@ -145,6 +169,18 @@
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>windows64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>1bb499f32799306c97bef031105223fb</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows64-vs12-20140709.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>windows64</string>
+          </map>
         </map>
       </map>
       <key>zlib</key>
@@ -192,6 +228,18 @@
             </map>
             <key>name</key>
             <string>windows</string>
+          </map>
+          <key>windows64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>7459ddf61c40764e0a58ffd84722bf99</string>
+              <key>url</key>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/zlib-1.2.8-windows64-vs12-20140709.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>windows64</string>
           </map>
         </map>
       </map>
@@ -330,6 +378,37 @@
           </array>
           <key>name</key>
           <string>windows</string>
+        </map>
+        <key>windows64</key>
+        <map>
+          <key>build_directory</key>
+          <string>stage</string>
+          <key>configurations</key>
+          <map>
+            <key>RelWithDebInfo</key>
+            <map>
+              <key>build</key>
+              <map>
+                <key>arguments</key>
+                <array>
+                  <string>build-cmd.sh</string>
+                </array>
+                <key>command</key>
+                <string>bash</string>
+              </map>
+              <key>default</key>
+              <boolean>true</boolean>
+              <key>name</key>
+              <string>RelWithDebInfo</string>
+            </map>
+          </map>
+          <key>manifest</key>
+          <array>
+            <string>lib/debug/*-sd.lib</string>
+            <string>lib/release/*-s.lib</string>
+          </array>
+          <key>name</key>
+          <string>64</string>
         </map>
       </map>
       <key>source_directory</key>
