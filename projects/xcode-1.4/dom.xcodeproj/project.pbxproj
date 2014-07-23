@@ -442,7 +442,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B2F97180F217E9A0086889D /* minizip.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC045055464E500DB518D /* minizip */;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
 			remoteInfo = minizip;
 		};
 /* End PBXContainerItemProxy section */
@@ -1597,9 +1597,15 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "dom" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* dom */;
 			projectDirPath = "";
 			projectReferences = (
@@ -1854,6 +1860,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -1861,23 +1870,21 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DOM_INCLUDE_LIBXML;
 				HEADER_SEARCH_PATHS = (
-					$SDKROOT/usr/include/libxml2,
-					"../../external-libs/minizip/include",
-					../../include,
-					"../../stage/packages/include",
-					"../../external-libs/pcre",
+					"../../stage/packages/include/**",
+					../../stage/packages/include/boost,
 					"../../external-libs/tinyxml",
 				);
-				INSTALL_PATH = /usr/local/lib;
+				INSTALL_PATH = "\"$(SRCROOT)/../../stage";
 				LIBRARY_SEARCH_PATHS = (
-					"../../external-libs/minizip/mac",
-					"../../stage/packages/lib/debug",
+					../../stage/packages/lib/debug,
 					"../../external-libs/tinyxml/lib/mac",
-					"../../external-libs/pcre/lib/mac",
 					"$(inherited)",
 					"\"$(SRCROOT)/../../external-libs/minizip/mac\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = dom;
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -1885,27 +1892,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PREPROCESSOR_DEFINITIONS = DOM_INCLUDE_LIBXML;
 				HEADER_SEARCH_PATHS = (
-					$SDKROOT/usr/include/libxml2,
-					"../../external-libs/minizip/include",
-					../../include,
-					"../../stage/packages/include",
-					"../../external-libs/pcre",
+					"../../stage/packages/include/**",
+					../../stage/packages/include/boost,
 					"../../external-libs/tinyxml",
 				);
-				INSTALL_PATH = /usr/local/lib;
+				INSTALL_PATH = "\"$(SRCROOT)/../../stage";
 				LIBRARY_SEARCH_PATHS = (
-					"../../external-libs/minizip/mac",
-					"../../stage/packages/lib/release",
+					../../stage/packages/lib/release,
 					"../../external-libs/tinyxml/lib/mac",
-					"../../external-libs/pcre/lib/mac",
 					"$(inherited)",
 					"\"$(SRCROOT)/../../external-libs/minizip/mac\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = dom;
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
@@ -1925,7 +1932,7 @@
 					../../include/1.4,
 					../../include/modules,
 					"../../external-libs/minizip/include",
-					"../../stage/packages/include",
+					../../stage/packages/include,
 					"../../external-libs/pcre/**",
 					"\"$(SRCROOT)/../../external-libs/tinyxml\"/**",
 					/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2,
@@ -1952,7 +1959,7 @@
 					../../include/dae,
 					../../include/modules,
 					"../../external-libs/minizip/include",
-					"../../stage/packages/include",
+					../../stage/packages/include,
 					"../../external-libs/pcre/**",
 					/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2,
 					"\"$(SRCROOT)/../../external-libs/tinyxml\"/**",
