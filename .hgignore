@@ -1,4 +1,5 @@
 syntax: glob
 stage/
+build/
 autobuild-parabuild-bootstrap/
 .DS_Store
