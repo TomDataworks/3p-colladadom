@@ -5,8 +5,10 @@
     <map>
       <key>boost</key>
       <map>
+        <key>description</key>
+        <string>Boost C++ Libraries</string>
         <key>license</key>
-        <string>boost</string>
+        <string>boost 1.0</string>
         <key>license_file</key>
         <string>LICENSES/boost.txt</string>
         <key>name</key>
@@ -18,9 +20,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b57789bd22dd166aade4a35ec5d36fbb</string>
+              <string>0658b77da0bd92194496ac627f512d91</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/Darwin/installer/boost-1.55.0-darwin-20140602.tar.bz2</string>
+              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/boost-1.55.0-darwin-201407221856.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -62,9 +64,15 @@
             <string>windows64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>1.55.0</string>
       </map>
       <key>libxml2</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (C) 1998-2012 Daniel Veillard.  All Rights Reserved.</string>
+        <key>description</key>
+        <string>Libxml2 is the XML C parser and toolkit developed for the Gnome project.</string>
         <key>license</key>
         <string>mit</string>
         <key>license_file</key>
@@ -78,9 +86,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4a5880b8235beb5ca21f1e252a46e342</string>
+              <string>0789ea4ff07b1dfa7c18e19bbdb6b11c</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/Darwin/installer/libxml2-2.9.1-darwin-20140602.tar.bz2</string>
+              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/libxml2-2.9.1-darwin-201407221659.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -122,13 +130,19 @@
             <string>windows64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>2.9.1</string>
       </map>
       <key>pcre</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (c) 1997-2014 University of Cambridge; Copyright(c) 2009-2014 Zoltan Herczeg; Copyright (c) 2007-2012, Google Inc.</string>
+        <key>description</key>
+        <string>PCRE Perl-compatible regular expression library</string>
         <key>license</key>
         <string>bsd</string>
         <key>license_file</key>
-        <string>LICENSES/pcre-license.txt</string>
+        <string>LICENSES/pcre.txt</string>
         <key>name</key>
         <string>pcre</string>
         <key>platforms</key>
@@ -138,9 +152,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>af0d38a4c56b52c4df40a4ff0d51efef</string>
+              <string>938eb095d244a082091a9ca61b262741</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-pcre-update/rev/290406/arch/Darwin/installer/pcre-8.35-darwin-20140529.tar.bz2</string>
+              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/pcre-8.35-darwin-201407230726.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -182,9 +198,15 @@
             <string>windows64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>8.35</string>
       </map>
       <key>zlib</key>
       <map>
+        <key>copyright</key>
+        <string>Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler</string>
+        <key>description</key>
+        <string>Zlib Data Compression Library</string>
         <key>license</key>
         <string>zlib</string>
         <key>license_file</key>
@@ -198,9 +220,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>6658071e3b54b1dd5f5279227aff402a</string>
+              <string>def7c8a96c80d7b695c58d94036548e4</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/Darwin/installer/zlib-1.2.8-darwin-20140602.tar.bz2</string>
+              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/zlib-1.2.8-darwin-201407200800.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -242,6 +264,8 @@
             <string>windows64</string>
           </map>
         </map>
+        <key>version</key>
+        <string>1.2.8</string>
       </map>
     </map>
     <key>package_description</key>
