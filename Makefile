@@ -39,7 +39,8 @@ os := linux
 ifneq ($(shell uname | grep -i darwin),)
 os := mac
 # make sure mac builds on llvm-gcc (4.2) and uses the 10.7 sdk with min version of 10.6
-CXX ?= llvm-g++
+# fuck you no. .CR.
+CXX ?= clang++
 CXXFLAGS += -fno-stack-protector
 LDFLAGS += -fno-stack-protector
 else ifneq ($(or $(shell uname | grep -i cygwin),$(shell uname | grep -i mingw)),)

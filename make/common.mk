@@ -19,7 +19,8 @@ endif
 
 ifeq ($(os),mac)
 # Add the -arch flags to specify what architectures we're building for.
-ccFlags += $(addprefix -arch ,$(subst x86,i386,$(archs)))
+ARCHS?=x86_64
+ccFlags += $(addprefix -arch , $(ARCHS))
 endif
 
 libOpts := $(LDFLAGS)

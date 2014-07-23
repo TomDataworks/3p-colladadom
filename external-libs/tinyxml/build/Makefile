@@ -19,7 +19,7 @@ outPath := $(platform)/
 
 compilerFlags += -Wall -c -O2
 ifeq ($(platform),mac)
-compilerFlags += -arch i386 -arch ppc
+compilerFlags += -arch i386 -arch x86_64
 endif
 
 linkerFlags += rcs

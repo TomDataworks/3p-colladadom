@@ -23,7 +23,7 @@ libOpts += -lz
 else ifeq ($(os),mac)
 # libOpts += -Lexternal-libs/libxml2/mingw/lib
 libOpts += -lz
-ccFlags += -arch ppc -arch i386
+ccFlags += -arch i386 -arch x86_64
 endif
 
 libName := libminizip$
