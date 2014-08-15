@@ -20,9 +20,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>3d5d97c83126592bc1d6b43fd9b8da19</string>
+              <string>2338363cbe910ffc474e603a2bb4421a</string>
               <key>url</key>
-              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/boost-1.55.0-darwin-201407231336.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/boost-1.56.0-darwin-201408151449.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -65,7 +65,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>1.55.0</string>
+        <string>1.56.0</string>
       </map>
       <key>libxml2</key>
       <map>
