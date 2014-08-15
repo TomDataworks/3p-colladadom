@@ -67,10 +67,11 @@ case "$AUTOBUILD_PLATFORM" in
     ;;
 
     darwin)
-        sdk=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/
+        DEVELOPER="$(xcode-select -print-path)"
+        sdk="${DEVELOPER}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk"
 
         # Let's remember to make this universal if we get boost universal again
-        opts="${TARGET_OPTS:--arch x86_64 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070}"
+        opts="${TARGET_OPTS:--arch i386 -arch x86_64 -iwithsysroot $sdk -mmacosx-version-min=10.7 -DMAC_OS_X_VERSION_MIN_REQUIRED=1070}"
 
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
