@@ -44,9 +44,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>047bfb76773aaa89a175c1bcd1b7e1e7</string>
+              <string>675c3314d8bc22452672d6b863a0861b</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.55.0-windows-vs12-20140706.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows-vs12-20140816.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -56,9 +56,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>138650dbbbb3d7e8664a19d510260615</string>
+              <string>638784b2a072c1f4139b0c0e0918c05f</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.55.0-windows64-vs12-20140709.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows64-vs12-20140816.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
