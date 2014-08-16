@@ -178,21 +178,21 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>618517af75bc872601f4e371a244bef4</string>
+              <string>66c7c13f0225953c7064072e4279a8ca</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows-vs12-20140706.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows-vs12-20140816.tar.bz2</string>
             </map>
             <key>name</key>
-            <string>linux</string>
+            <string>windows</string>
           </map>
           <key>windows64</key>
           <map>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1bb499f32799306c97bef031105223fb</string>
+              <string>1bcc96a7c9d4e34648ddeeaad5a2c66a</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows64-vs12-20140709.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows64-vs12-20140816.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
