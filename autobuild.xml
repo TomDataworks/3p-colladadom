@@ -20,9 +20,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2338363cbe910ffc474e603a2bb4421a</string>
+              <string>229814e3229c282c0b3f94dcdf607e43</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/boost-1.56.0-darwin-201408151449.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/boost-1.56.0-darwin-201410161532.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -86,9 +86,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>3187512e28189fd7152f64f0e3f9bf79</string>
+              <string>883977cd66dec28860dc854b0214652b</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/libxml2-2.9.1-darwin-201407252028.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/libxml2-2.9.1-darwin-201410161520.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
