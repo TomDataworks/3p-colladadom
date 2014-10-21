@@ -152,11 +152,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>938eb095d244a082091a9ca61b262741</string>
+              <string>521d56d2ff1421e4a42d8087c6cbe45d</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/pcre-8.35-darwin-201407230726.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/pcre-8.36-darwin-201410211250.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -199,7 +199,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>8.35</string>
+        <string>8.36</string>
       </map>
       <key>zlib</key>
       <map>
