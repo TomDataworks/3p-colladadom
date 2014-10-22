@@ -44,9 +44,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>675c3314d8bc22452672d6b863a0861b</string>
+              <string>a58d04d69561010b9e5ae84309cfb2d5</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows-vs12-20140816.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows-20141021.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -56,9 +56,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>638784b2a072c1f4139b0c0e0918c05f</string>
+              <string>f5df00c1447524dc3723c45db344a376</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows64-vs12-20140816.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/boost-1.56.0-windows64-20141021.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -110,9 +110,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9f6cf700b497fd1af69ef3d6f931be53</string>
+              <string>680643aa631c1128246b51b4f02508bc</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.1-windows-vs12-20140706.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.2-windows-20141021.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -122,9 +122,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>425ed9b60b909fc33605bbac76a25f5d</string>
+              <string>e49997e221369492c26f069e8f72e60d</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.1-windows64-vs12-20140709.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/libxml2-2.9.2-windows64-20141021.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -178,9 +178,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>66c7c13f0225953c7064072e4279a8ca</string>
+              <string>c7c98dccb566375fc66330a1784606b2</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows-vs12-20140816.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.36-windows-20141016.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -190,9 +190,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1bcc96a7c9d4e34648ddeeaad5a2c66a</string>
+              <string>f2a1d71bba183c166acf99996d5dce11</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.35-windows64-vs12-20140816.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-vs12/downloads/pcre-8.36-windows64-20141016.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
