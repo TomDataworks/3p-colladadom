@@ -138,9 +138,62 @@ case "$AUTOBUILD_PLATFORM" in
 
         LDFLAGS="$opts" \
             CFLAGS="$opts" \
-            CXXFLAGS="$opts" \
+            CXXFLAGS="$opts -std=gnu++11" \
             arch=i386 \
             make 
+
+        # conditionally run unit tests
+        if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
+            build/linux-1.4-d/domTest -all
+            build/linux-1.4/domTest -all
+        fi
+
+        cp -a build/linux-1.4/libcollada14dom.a "$libdir"/lib/release/
+        cp -a build/linux-1.4-d/libcollada14dom-d.a "$libdir"/lib/debug/
+    ;;
+    linux64)
+        # Linux build environment at Linden comes pre-polluted with stuff that can
+        # seriously damage 3rd-party builds.  Environmental garbage you can expect
+        # includes:
+        #
+        #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
+        #    DISTCC_LOCATION            top            branch      CC
+        #    DISTCC_HOSTS               build_name     suffix      CXX
+        #    LSDISTCC_ARGS              repo           prefix      CFLAGS
+        #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
+        #
+        # So, clear out bits that shouldn't affect our configure-directed build
+        # but which do nonetheless.
+        #
+        # unset DISTCC_HOSTS CC CXX CFLAGS CPPFLAGS CXXFLAGS
+
+        # Prefer gcc-4.8 if available.
+        if [ -x /usr/bin/gcc-4.8 -a -x /usr/bin/g++-4.8 ]; then
+            export CC=/usr/bin/gcc-4.8
+            export CXX=/usr/bin/g++-4.8
+        fi
+
+        # Default target to 64-bit
+        opts="${TARGET_OPTS:--m64}"
+
+        # Handle any deliberate platform targeting
+        if [ -z "$TARGET_CPPFLAGS" ]; then
+            # Remove sysroot contamination from build environment
+            unset CPPFLAGS
+        else
+            # Incorporate special pre-processing flags
+            export CPPFLAGS="$TARGET_CPPFLAGS" 
+        fi
+
+        libdir="$top/stage"
+        mkdir -p "$libdir"/lib/{debug,release}
+
+        #make clean # Hide 'arch' env var
+
+        LDFLAGS="$opts" \
+            CFLAGS="$opts" \
+            CXXFLAGS="$opts -std=gnu++11" \
+            make -j4 
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
