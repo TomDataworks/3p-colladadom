@@ -94,30 +94,6 @@ list<string> cdom::tokenize(const string& s,
 	return result;
 }
 
-vector<string> cdom::makeStringArray(const char* s, ...) {
-	va_list args;
-	va_start(args, s);
-	vector<string> result;
-	while (s) {
-		result.push_back(s);
-		s = va_arg(args, const char*);
-	}
-	va_end(args);
-	return result;
-}
-
-list<string> cdom::makeStringList(const char* s, ...) {
-	va_list args;
-	va_start(args, s);
-	list<string> result;
-	while (s) {
-		result.push_back(s);
-		s = va_arg(args, const char*);
-	}
-	va_end(args);
-	return result;
-}
-
 string cdom::getCurrentDir() {
 #ifdef __CELLOS_LV2__
 	// The PS3 has no getcwd call.

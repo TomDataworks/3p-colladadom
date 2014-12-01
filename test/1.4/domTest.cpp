@@ -124,15 +124,18 @@ DefineTest(utils) {
 	CheckResult(replace("abc123", "bc12", "b") == "ab3");
 	CheckResult(replace("abracadabra", "a", "") == "brcdbr");
 
-	CheckResult(tokenize("1|2|3|4", "|")   == makeStringList("1", "2", "3", "4", 0));
-	CheckResult(tokenize("|1|", "|")       == makeStringList("1", 0));
-	CheckResult(tokenize("1|||2||3|", "|") == makeStringList("1", "2", "3", 0));
-	CheckResult(tokenize("1|||2||3|", "|", true) ==
-	            makeStringList("1", "|", "|", "|", "2", "|", "|", "3", "|", 0));
-	CheckResult(tokenize("this/is some#text", "/#", true) ==
-	            makeStringList("this", "/", "is some", "#", "text", 0));
-	CheckResult(tokenize("this/is some#text", "/# ", false) ==
-	            makeStringList("this", "is", "some", "text", 0));
+	list<string> test1 = {"1", "2", "3", "4"};
+	CheckResult(tokenize("1|2|3|4", "|")   == test1);
+	list<string> test2 = {"1"};
+	CheckResult(tokenize("|1|", "|")       == test2);
+	list<string> test3 = {"1", "2", "3"};
+	CheckResult(tokenize("1|||2||3|", "|") == test3);
+	list<string> test4 = {"1", "|", "|", "|", "2", "|", "|", "3", "|"};
+	CheckResult(tokenize("1|||2||3|", "|", true) == test4);
+	list<string> test5 = {"this", "/", "is some", "#", "text"};
+	CheckResult(tokenize("this/is some#text", "/#", true) == test5);
+	list<string> test6 = {"this", "is", "some", "text"};
+	CheckResult(tokenize("this/is some#text", "/# ", false) == test6);
 
 	CheckResult(toString(5) == "5");
 	CheckResult(toFloat(toString(4.0f)) == 4.0f);
@@ -822,18 +825,18 @@ DefineTest(placeElement) {
 
 	daeElement* node = dae.getDatabase()->idLookup("Box").at(0);
 
-	CheckResult(getChildNames(node) == makeStringArray(
-		"rotate", "rotate", "rotate", "instance_geometry", 0));
+	vector<string> test1 = {"rotate", "rotate", "rotate", "instance_geometry"};
+	CheckResult(getChildNames(node) == test1);
 
 	// Place a new <translate> after the first <rotate> using placeElementAfter, and
 	// make sure the <translate> shows up in the right spot.
+        vector<string> test2 = {"rotate", "translate", "rotate", "rotate", "instance_geometry"};
 	node->placeElementAfter(node->getChildren()[0], node->createElement("translate"));
-	CheckResult(getChildNames(node) == makeStringArray(
-		"rotate", "translate", "rotate", "rotate", "instance_geometry", 0));
+	CheckResult(getChildNames(node) == test2);
 
+	vector<string> test3 = {"scale", "rotate", "translate", "rotate", "rotate", "instance_geometry"};
 	node->placeElementBefore(node->getChildren()[0], node->createElement("scale"));
-	CheckResult(getChildNames(node) == makeStringArray(
-		"scale", "rotate", "translate", "rotate", "rotate", "instance_geometry", 0));
+	CheckResult(getChildNames(node) == test3);
 
 	return testResult(true);
 };

@@ -54,9 +54,6 @@ namespace cdom {
 	                      bool separatorsInResult = false);
 
 	typedef std::list<std::string>::iterator tokenIter;
-	
-	DLLSPEC std::vector<std::string> makeStringArray(const char* s, ...);
-	DLLSPEC std::list<std::string> makeStringList(const char* s, ...);
 
 	DLLSPEC std::string getCurrentDir();
 	DLLSPEC std::string getCurrentDirAsUri();

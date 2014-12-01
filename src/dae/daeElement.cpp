@@ -507,11 +507,11 @@ string daeElement::compareResult::format() {
 	       childCount2 = formatToken(cdom::toString(elt2->getChildren().getCount()));
 		
 	// Compute formatting information
-	vector<string> col1Tokens = cdom::makeStringArray("Name", "Type", "ID",
-		"Attr name", "Attr value", "Char data", "Child count", 0);
-	vector<string> col2Tokens = cdom::makeStringArray("Element 1", name1.c_str(),
+	vector<string> col1Tokens = { "Name", "Type", "ID",
+		"Attr name", "Attr value", "Char data", "Child count"};
+	vector<string> col2Tokens = {"Element 1", name1.c_str(),
 		type1.c_str(), id1.c_str(), attrName1.c_str(), attrValue1.c_str(),
-		charData1.c_str(), childCount1.c_str(), 0);
+		charData1.c_str(), childCount1.c_str()};
 		
 	int c1w = getNecessaryColumnWidth(col1Tokens),
 	    c2w = getNecessaryColumnWidth(col2Tokens);
