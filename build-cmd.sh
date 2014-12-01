@@ -138,7 +138,7 @@ case "$AUTOBUILD_PLATFORM" in
 
         LDFLAGS="$opts" \
             CFLAGS="$opts" \
-            CXXFLAGS="$opts -std=gnu++11" \
+            CXXFLAGS="$opts -std=c++11" \
             arch=i386 \
             make 
 
@@ -188,11 +188,11 @@ case "$AUTOBUILD_PLATFORM" in
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
 
-        #make clean # Hide 'arch' env var
+        make clean
 
         LDFLAGS="$opts" \
             CFLAGS="$opts" \
-            CXXFLAGS="$opts -std=gnu++11" \
+            CXXFLAGS="$opts -std=c++11" \
             make -j4 
 
         # conditionally run unit tests
