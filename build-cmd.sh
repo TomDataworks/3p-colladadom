@@ -9,6 +9,8 @@ if [ -z "$AUTOBUILD" ] ; then
     fail
 fi
 
+COLLADA_VERSION="2.3"
+
 if [ "$OSTYPE" = "cygwin" ] ; then
     export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
 fi
@@ -25,6 +27,8 @@ top="$(pwd)"
 stage="$top/stage"
 
 [ -f "$stage"/packages/include/zlib/zlib.h ] || fail "You haven't installed zlib package yet."
+
+echo "${COLLADA_VERSION}" > "${stage}/VERSION.txt"
 
 case "$AUTOBUILD_PLATFORM" in
 
