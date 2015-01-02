@@ -70,11 +70,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ad77cf08cb7ad371eabb97180e6f9c1c</string>
+              <string>7104cd763768d0308168293adf16e2db</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/boost-1.57.0-windows64-201412311633.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/boost-1.57.0-windows64-201501011800.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -150,11 +150,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>fbacbe18d878b582bbb9de1d74e48911</string>
+              <string>217941d61b763bbed4c8db88c861c870</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/icu4c-54.1-windows64-201412311513.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/icu4c-54.1-windows64-201501010244.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -230,11 +230,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4285b3b1a95e0ca5f16450abcbf889b3</string>
+              <string>96af2103b229060bf603f12dc074cea8</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/libxml2-2.9.2-windows64-201412311709.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/libxml2-2.9.2-windows64-201501010353.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -312,11 +312,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>60e9d223d93f0714b31c72dd3b1f6f5c</string>
+              <string>5ab629c0fa68794bb8780d54d90e93b9</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/pcre-8.36-windows64-201412302353.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/pcre-8.36-windows64-201501010019.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -392,11 +392,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>743624c39df49bd5595d80a1c94bbf5e</string>
+              <string>5b42d6cba346aa0a9fd5055b5eff2cb7</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/zlib-1.2.8-windows64-201412310032.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/zlib-1.2.8-windows64-201501010307.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
