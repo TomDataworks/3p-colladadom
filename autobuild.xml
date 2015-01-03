@@ -300,9 +300,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>45132e467b6ef0473c52331cde349242</string>
+              <string>a9dc6b77957573e7c13385034d9f3822</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux/lib/pcre-8.36-linux64-20141212.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/pcre-8.36-linux64-201501030107.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
