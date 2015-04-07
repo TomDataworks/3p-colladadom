@@ -10,7 +10,6 @@ src += $(wildcard src/$(colladaVersion)/dom/*.cpp)
 
 includeOpts := -Istage/packages/include \
 	-Istage/packages/include/zlib \
-	-Istage/packages/include/pcre \
 	-Istage/packages/include/libxml2 \
 	-Istage/packages/include/minizip \
 	-Iinclude \
@@ -46,14 +45,6 @@ includeOpts += -Iexternal-libs/tinyxml/
 libOpts += external-libs/tinyxml/lib/$(buildID)/libtinyxml.a
 endif
 
-# On Mac, Windows and PS3 we need to be told where to find pcre
-ifeq ($(os),windows)
-ccFlags += -DPCRE_STATIC
-else
-includeOpts += -Istage/packages/include/pcre
-libOpts += $(addprefix stage/packages/lib/release/,libpcrecpp.a libpcre.a )
-endif
-
 # For mingw: add boost
 ifneq ($(findstring $(os),linux mac),)
 includeOpts += -Istage/packages/include
@@ -63,6 +54,7 @@ else
 debug_suffix = ""
 endif
 libOpts += stage/packages/lib/$(conf)/libboost_system-mt$(debug_suffix).a
+libOpts += stage/packages/lib/$(conf)/libboost_regex-mt$(debug_suffix).a
 libOpts += stage/packages/lib/$(conf)/libboost_filesystem-mt$(debug_suffix).a 
 endif
 
