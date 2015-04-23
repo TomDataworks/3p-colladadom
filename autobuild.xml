@@ -48,11 +48,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c521a125dd22111053e4f0202ba54a9d</string>
+              <string>35eee78f0d9ee96a5ea1b89830501f16</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/boost-1.57.0-linux64-201501031025.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/boost-1.58.0-linux64-201504230342.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -85,7 +85,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>1.57.0</string>
+        <string>1.58.0</string>
       </map>
       <key>icu4c</key>
       <map>
@@ -132,11 +132,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>cbc8c61a37825a160f3df6226f86fe80</string>
+              <string>493621562e5963e5f2f9378acebb6572</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/icu4c-54.1-linux64-201501030432.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/icu4c-55.1-linux64-201504222239.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -169,7 +169,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>54.1</string>
+        <string>55.1</string>
       </map>
       <key>libxml2</key>
       <map>
@@ -216,11 +216,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>36f7e30c25ff6ffc2da092dbf17cc1eb</string>
+              <string>2b5734e69de4451e0dd6fc6ce882d0e2</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/libxml2-2.9.2-linux64-201501031010.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/libxml2-2.9.2-linux64-201504230046.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -300,11 +300,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7e02ce63286a14c28e410fd399e7a748</string>
+              <string>461a0af0346a9140e7bb598eb8e78905</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201501030147.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201504222303.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
