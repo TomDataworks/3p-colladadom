@@ -179,6 +179,8 @@ case "$AUTOBUILD_PLATFORM" in
 
         # Default target to 64-bit
         opts="${TARGET_OPTS:--m64}"
+        JOBS=`cat /proc/cpuinfo | grep processor | wc -l`
+        HARDENED="-fstack-protector-strong -D_FORTIFY_SOURCE=2"
 
         # Handle any deliberate platform targeting
         if [ -z "$TARGET_CPPFLAGS" ]; then
@@ -197,7 +199,12 @@ case "$AUTOBUILD_PLATFORM" in
         LDFLAGS="$opts" \
             CFLAGS="$opts" \
             CXXFLAGS="$opts -std=c++11" \
-            make -j4 
+            make conf=debug -j$JOBS
+
+        LDFLAGS="$opts" \
+            CFLAGS="$opts $HARDENED" \
+            CXXFLAGS="$opts $HARDENED -std=c++11" \
+            make conf=release -j$JOBS
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
