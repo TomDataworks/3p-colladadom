@@ -33,44 +33,44 @@ echo "${COLLADA_VERSION}" > "${stage}/VERSION.txt"
 case "$AUTOBUILD_PLATFORM" in
 
     windows)
-        build_sln "projects/vc12-1.4/dom.sln" "Debug|Win32" domTest
-        build_sln "projects/vc12-1.4/dom.sln" "Release|Win32" domTest
-        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc12-1.4-d/
-        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc12-1.4/
+        build_sln "projects/vc14-1.4/dom.sln" "Debug|Win32" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Release|Win32" domTest
+        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc14-1.4-d/
+        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc14-1.4/
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/vc12-1.4-d/domTest.exe -all
-            build/vc12-1.4/domTest.exe -all
+            build/vc14-1.4-d/domTest.exe -all
+            build/vc14-1.4/domTest.exe -all
         fi
 
         # stage the good bits
         mkdir -p "$stage"/lib/{debug,release}
-        cp -a build/vc12-1.4-d/libcollada14dom23-sd.lib \
+        cp -a build/vc14-1.4-d/libcollada14dom23-sd.lib \
             "$stage"/lib/debug/
                 
-        cp -a build/vc12-1.4/libcollada14dom23-s.lib \
+        cp -a build/vc14-1.4/libcollada14dom23-s.lib \
             "$stage"/lib/release/
     ;;
 
     windows64)
-        build_sln "projects/vc12-1.4/dom.sln" "Debug|x64" domTest
-        build_sln "projects/vc12-1.4/dom.sln" "Release|x64" domTest
-        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc12-x64-1.4-d/
-        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc12-x64-1.4/
+        build_sln "projects/vc14-1.4/dom.sln" "Debug|x64" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Release|x64" domTest
+        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc14-x64-1.4-d/
+        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc14-x64-1.4/
         
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
-            build/vc12-x64-1.4-d/domTest.exe -all
-            build/vc12-x64-1.4/domTest.exe -all
+            build/vc14-x64-1.4-d/domTest.exe -all
+            build/vc14-x64-1.4/domTest.exe -all
         fi
 
         # stage the good bits
         mkdir -p "$stage"/lib/{debug,release}
-        cp -a build/vc12-x64-1.4-d/libcollada14dom23-sd.lib \
+        cp -a build/vc14-x64-1.4-d/libcollada14dom23-sd.lib \
             "$stage"/lib/debug/
                 
-        cp -a build/vc12-x64-1.4/libcollada14dom23-s.lib \
+        cp -a build/vc14-x64-1.4/libcollada14dom23-s.lib \
             "$stage"/lib/release/
     ;;
 
