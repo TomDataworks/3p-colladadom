@@ -35,8 +35,6 @@ case "$AUTOBUILD_PLATFORM" in
     windows)
         build_sln "projects/vc14-1.4/dom.sln" "Debug|Win32" domTest
         build_sln "projects/vc14-1.4/dom.sln" "Release|Win32" domTest
-        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc14-1.4-d/
-        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc14-1.4/
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
@@ -56,8 +54,6 @@ case "$AUTOBUILD_PLATFORM" in
     windows64)
         build_sln "projects/vc14-1.4/dom.sln" "Debug|x64" domTest
         build_sln "projects/vc14-1.4/dom.sln" "Release|x64" domTest
-        cp -a  "$stage"/packages/lib/debug/icu*.dll build/vc14-x64-1.4-d/
-        cp -a  "$stage"/packages/lib/release/icu*.dll build/vc14-x64-1.4/
         
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
