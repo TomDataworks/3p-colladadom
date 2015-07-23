@@ -48,11 +48,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>35eee78f0d9ee96a5ea1b89830501f16</string>
+              <string>fcc8965fc8e4c77b02c63158f5bd61ba</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/boost-1.58.0-linux64-201504230342.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/boost-1.58.0-linux64-201507231705.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -134,11 +134,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2b5734e69de4451e0dd6fc6ce882d0e2</string>
+              <string>bcfb3196df9b18aaf4f25ae40c8eda69</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/libxml2-2.9.2-linux64-201504230046.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/libxml2-2.9.2-linux64-201507231608.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
