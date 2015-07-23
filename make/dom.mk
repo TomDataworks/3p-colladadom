@@ -32,7 +32,7 @@ ifeq ($(os),windows)
 libOpts += -lxml2 -lws2_32 -lz
 else
 ifeq ($(os),linux)
-libOpts += -lxml2 -liconv -lz
+libOpts += -lxml2 -lz
 else
 libOpts += -lxml2 -liconv
 endif
