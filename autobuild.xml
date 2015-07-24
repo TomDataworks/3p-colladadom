@@ -62,11 +62,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>1a8ece93cf80ac0dfbc5315543309e7c</string>
+              <string>a20616e2a687b6fac9c2614dc4d82812</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/boost-1.58.0-windows-201504271706.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib-vc14/boost-1.58.0-windows-201507232038.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -148,11 +148,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>b30f21bd48de311568ce3c1a51f0670a</string>
+              <string>e9633ef398c30dff63112a7dd1b48872</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/libxml2-2.9.2-windows-201504271403.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib-vc14/libxml2-2.9.2-windows-201507232021.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
@@ -234,11 +234,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>180ccbbf9c262a823fb5ad1d1917767d</string>
+              <string>86efee0b20b3cb204dba538b1205f966</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows/lib/zlib-1.2.8-windows-201504262238.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib-vc14/zlib-1.2.8-windows-201507231838.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
