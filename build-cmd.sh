@@ -33,8 +33,8 @@ echo "${COLLADA_VERSION}" > "${stage}/VERSION.txt"
 case "$AUTOBUILD_PLATFORM" in
 
     windows)
-        build_sln "projects/vc14-1.4/dom.sln" "Debug|Win32" domTest
-        build_sln "projects/vc14-1.4/dom.sln" "Release|Win32" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Debug" "Win32" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Release" "Win32" domTest
 
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
@@ -52,8 +52,8 @@ case "$AUTOBUILD_PLATFORM" in
     ;;
 
     windows64)
-        build_sln "projects/vc14-1.4/dom.sln" "Debug|x64" domTest
-        build_sln "projects/vc14-1.4/dom.sln" "Release|x64" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Debug" "x64" domTest
+        build_sln "projects/vc14-1.4/dom.sln" "Release" "x64" domTest
         
         # conditionally run unit tests
         if [ "${DISABLE_UNIT_TESTS:-0}" = "0" ]; then
