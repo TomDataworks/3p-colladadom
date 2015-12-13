@@ -76,11 +76,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7226a4a4836a84ac55ed1255bf34a923</string>
+              <string>fcf0ab42db5654736d7029ef7a72bfa1</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/boost-1.59.0-windows64-201509080045.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/boost-1.59.0-windows64-201512122057.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -162,11 +162,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>626ca155e9b071d76d69cc27f66615bf</string>
+              <string>4453be9f68208147e4a7d508db677583</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/libxml2-2.9.2-windows64-201507220229.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/libxml2-2.9.3-windows64-201512122133.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -248,11 +248,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>62755203023407b24e9bcf9bf50e6d4c</string>
+              <string>5b3a58a6a939e83f94137171b7f814de</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/zlib-1.2.8-windows64-201507220206.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/zlib-1.2.8-windows64-201512071625.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
