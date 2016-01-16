@@ -76,11 +76,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>fcf0ab42db5654736d7029ef7a72bfa1</string>
+              <string>f2ff62721cffd4556d18cbec67152de1</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/boost-1.59.0-windows64-201512122057.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/boost-1.60.0-windows64-201601160313.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
