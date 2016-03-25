@@ -48,11 +48,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>543643b22f086af333a3dcfbf75742e2</string>
+              <string>74a88afa7ff50462059c17321f91a359</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/boost-1.59.0-linux64-201509201640.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/boost-1.60.0-linux64-201603241316.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -134,11 +134,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>bcfb3196df9b18aaf4f25ae40c8eda69</string>
+              <string>61351b10787b06045a70c905a58ca2f6</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/libxml2-2.9.2-linux64-201507231608.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/libxml2-2.9.3-linux64-201603241216.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -220,11 +220,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>461a0af0346a9140e7bb598eb8e78905</string>
+              <string>1eaee9888043648d5f09716b771dcb4b</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/linux64/lib/zlib-1.2.8-linux64-201504222303.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib-trusty/zlib-1.2.8-linux64-201603240746.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
