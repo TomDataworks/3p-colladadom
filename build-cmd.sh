@@ -81,8 +81,8 @@ case "$AUTOBUILD_PLATFORM" in
 
 
         CFLAGS="$opts -gdwarf-2" \
-            CXXFLAGS="$opts -gdwarf-2 -std=c++11 -stdlib=libc++" \
-            LDFLAGS="-Wl,-headerpad_max_install_names -std=c++11 -stdlib=libc++" \
+            CXXFLAGS="$opts -gdwarf-2 -std=c++14 -stdlib=libc++" \
+            LDFLAGS="-Wl,-headerpad_max_install_names -std=c++14 -stdlib=libc++" \
 	    make
 
         # conditionally run unit tests
