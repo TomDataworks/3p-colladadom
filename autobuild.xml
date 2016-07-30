@@ -108,11 +108,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>242ffec9e9f8fca818b750c578eba0dd</string>
+              <string>816d007ab36d8b186a2df3963f144732</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/libxml2-2.9.3-darwin-201511222121.tar.bz2</string>
+              <string>https://bitbucket.org/alchemyviewer/publiclibs-darwin/downloads/libxml2-2.9.4-darwin-201607301701.tar.bz2</string>
             </map>
             <key>name</key>
             <string>darwin</string>
@@ -173,7 +173,7 @@
           </map>
         </map>
         <key>version</key>
-        <string>2.9.3</string>
+        <string>2.9.4</string>
       </map>
       <key>zlib</key>
       <map>
