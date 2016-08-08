@@ -74,7 +74,7 @@ case "$AUTOBUILD_PLATFORM" in
         DEVELOPER="$(xcode-select -print-path)"
         sdk="${DEVELOPER}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk"
 
-        opts="${TARGET_OPTS:--arch i386 -arch x86_64 -iwithsysroot $sdk -mmacosx-version-min=10.8 -DMAC_OS_X_VERSION_MIN_REQUIRED=1080}"
+        opts="${TARGET_OPTS:--arch x86_64 -iwithsysroot $sdk -mmacosx-version-min=10.8 -DMAC_OS_X_VERSION_MIN_REQUIRED=1080}"
 
         libdir="$top/stage"
         mkdir -p "$libdir"/lib/{debug,release}
@@ -83,7 +83,7 @@ case "$AUTOBUILD_PLATFORM" in
         CFLAGS="$opts -gdwarf-2" \
             CXXFLAGS="$opts -gdwarf-2 -std=c++14 -stdlib=libc++" \
             LDFLAGS="-Wl,-headerpad_max_install_names -std=c++14 -stdlib=libc++" \
-	    make
+	    make conf=all
 
         # conditionally run unit tests
         # As of 2014.7.23 tests segfault on mac, disabling completely
