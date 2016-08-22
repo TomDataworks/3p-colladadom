@@ -76,11 +76,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>be42b0505f597cb91828bd5a17f23fe3</string>
+              <string>f38847c000e7a66c510f8f8b8d978863</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/boost-1.60.0-windows64-201604091608.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14_3/boost-1.60.0-windows64-201608212158.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -162,11 +162,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>4453be9f68208147e4a7d508db677583</string>
+              <string>bb8b8a818a7969e38d41bbd3a27f295a</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/libxml2-2.9.3-windows64-201512122133.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14_3/libxml2-2.9.4-windows64-201608212140.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -248,11 +248,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5b3a58a6a939e83f94137171b7f814de</string>
+              <string>518f6d616589fdd5233b28b26b6e0f1c</string>
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14/zlib-1.2.8-windows64-201512071625.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib-vc14_3/zlib-1.2.8-windows64-201608211941.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
