@@ -36,9 +36,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>2f076eae296600a1b810ce375dc4b42d</string>
+              <string>9a13c405aa77636adce9fb5e0be60d43</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-boost-update/rev/290566/arch/Linux/installer/boost-1.55.0-linux-20140602.tar.bz2</string>
+              <string>http://dwaggy.tk/singularity/boost-1.60.0-linux-201609111643.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -122,9 +122,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7eb90f075730f8d7d176f8fb7bad5ef5</string>
+              <string>7ad59c7c0451170cd49a4cc01064071f</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-libxml-update/rev/290562/arch/Linux/installer/libxml2-2.9.1-linux-20140602.tar.bz2</string>
+              <string>http://dwaggy.tk/singularity/libxml2-2.9.4-linux-201609111728.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -208,9 +208,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>63a62bb3cbef2aad3cca49cb6f2d0aeb</string>
+              <string>873be966974a0873c31f6e51b231774e</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/3pl_3p-zlib-update/rev/290556/arch/Linux/installer/zlib-1.2.8-linux-20140602.tar.bz2</string>
+              <string>http://dwaggy.tk/singularity/zlib-1.2.8-linux-201609111523.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
