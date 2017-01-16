@@ -36,9 +36,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>9a13c405aa77636adce9fb5e0be60d43</string>
+              <string>PACKAGE_DEPS_MD5SUM</string>
               <key>url</key>
-              <string>http://dwaggy.tk/singularity/boost-1.60.0-linux-201609111643.tar.bz2</string>
+              <string>PACKAGE_DEPS_FILENAME</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -122,9 +122,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7ad59c7c0451170cd49a4cc01064071f</string>
+              <string>PACKAGE_DEPS_MD5SUM</string>
               <key>url</key>
-              <string>http://dwaggy.tk/singularity/libxml2-2.9.4-linux-201609111728.tar.bz2</string>
+              <string>PACKAGE_DEPS_FILENAME</string>
             </map>
             <key>name</key>
             <string>linux</string>
@@ -208,9 +208,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>873be966974a0873c31f6e51b231774e</string>
+              <string>PACKAGE_DEPS_MD5SUM</string>
               <key>url</key>
-              <string>http://dwaggy.tk/singularity/zlib-1.2.8-linux-201609111523.tar.bz2</string>
+              <string>PACKAGE_DEPS_FILENAME</string>
             </map>
             <key>name</key>
             <string>linux</string>
